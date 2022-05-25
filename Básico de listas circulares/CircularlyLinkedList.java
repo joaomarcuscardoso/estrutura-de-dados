@@ -1,3 +1,5 @@
+import linear.base.LinkedList;
+
 public class CircularlyLinkedList<E> implements LinkedList<E> {
 
 	@SuppressWarnings("hiding")
@@ -93,6 +95,22 @@ public class CircularlyLinkedList<E> implements LinkedList<E> {
 		} while (walk != tail);
 		sb.append(")");
 		return sb.toString();
+	}
+	
+	public void inverse() {
+		Node atual = tail.getNext();
+		Node prox = atual.getNext();
+
+		// Quantas vezes vai mudar os elementos(tamanho do for).
+		for (int i = 0; i < size - 1; i++) {
+			Node novo = prox.getNext();
+			prox.setNext(atual);
+			atual = prox;
+			prox = novo;
+		}
+
+		prox.setNext(atual);
+		tail = prox;
 	}
 	
 }

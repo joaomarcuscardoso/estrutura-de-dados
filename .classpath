@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Básico de listas circulares"/>
+	<classpathentry kind="src" path="Básico de listas duplamente encadeadas"/>
+	<classpathentry kind="src" path="Básico de listas encadeadas simples"/>
+	<classpathentry kind="src" path="estruturasfundamentais"/>
+	<classpathentry kind="src" path="Extra_ Listas encadeadas simples"/>
+	<classpathentry kind="src" path="pilha_fila_deque"/>
+	<classpathentry kind="src" path="PositionalList e PriorityQueue"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

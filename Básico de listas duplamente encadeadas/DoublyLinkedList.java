@@ -1,3 +1,5 @@
+import linear.base.LinkedList;
+
 public class DoublyLinkedList<E> implements LinkedList<E> {
 
 	@SuppressWarnings("hiding")
@@ -157,5 +159,37 @@ public class DoublyLinkedList<E> implements LinkedList<E> {
 		if (i < 0 || i >= n)
 			throw new IndexOutOfBoundsException("Illegal index: " + i);
 	}
+	
+	public DoublyLinkedList<E> divideByHalf() {
+		if(isEmpty()) {
+			return new DoublyLinkedList<>();
+		}
+		
+		int newSize = size / 2;
+		
+		Node<E> walk = header.getNext();
+		
+		for (int i = 0; i < newSize; i++) {
+			walk = walk.getNext();
+			
+		}
+		
+		Node<E> newWalk = walk.getNext();
+		
+		DoublyLinkedList<E> newList = new DoublyLinkedList<>();
+		newList.header.setNext(newWalk);
+		newWalk.setPrev(newList.header);
+		
+		newList.trailer.setPrev(newList.trailer);
+		trailer.getPrev().setNext(newList.trailer);
+		newList.size = size - newSize;
+		
+		trailer.setPrev(walk);
+		walk.setNext(trailer);
+		size = newSize;
+		
+		return newList;
+	}
+
 	
 }
