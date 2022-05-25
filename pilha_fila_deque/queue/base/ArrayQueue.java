@@ -1,6 +1,8 @@
 package queue.base;
 
 public class ArrayQueue<E> implements Queue<E> {
+	
+	// fila - fifo - first in first out
 	public static final int CAPACITY = 1000;
 	private E[] data;
 	private int f = 0;

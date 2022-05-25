@@ -4,6 +4,7 @@ import queue.base.ArrayQueue;
 import queue.base.Queue;
 
 public class TestQueueInteger {
+	// fila - fifo - first in first out
 	
 	public static void main(String[] args) {
 		Queue<Integer> queue = new ArrayQueue<>(3);

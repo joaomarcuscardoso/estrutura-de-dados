@@ -3,6 +3,8 @@ package queue.base;
 import linear.base.SinglyLinkedList;
 
 public class LinkedQueue<E> implements Queue<E> {
+	// fila - fifo - first in first out
+
 	private SinglyLinkedList<E> list = new SinglyLinkedList<>();
 
 	public LinkedQueue() {

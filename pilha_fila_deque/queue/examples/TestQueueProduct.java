@@ -5,6 +5,7 @@ import queue.base.LinkedQueue;
 import queue.base.Queue;
 
 public class TestQueueProduct {
+	// fila - fifo - first in first out
 	
 	public static void main(String[] args) {
 		Queue<Product> queue = new LinkedQueue<>();
